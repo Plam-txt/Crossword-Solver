@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Crossword Solver</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Crossword Solver</h1>
+    <input type="text" id="rowInput" placeholder="Set the row size #default 5">
+    <button id="setRowButton">Set</button>
+    <br>
+    
+    <div id="crosswordContainer" style="margin-top: 20px;">
+        <input style="width: 500px; text-align: center; border: 1px solid #ccc; display: block; margin-bottom: 10px;" type="text" placeholder="Enter letter in row 1 a,b,c,d,e">
+        <input style="width: 500px; text-align: center; border: 1px solid #ccc; display: block; margin-bottom: 10px;" type="text" placeholder="Enter letter in row 2 a,b,c,d,e">
+        <input style="width: 500px; text-align: center; border: 1px solid #ccc; display: block; margin-bottom: 10px;" type="text" placeholder="Enter letter in row 3 a,b,c,d,e">
+        <input style="width: 500px; text-align: center; border: 1px solid #ccc; display: block; margin-bottom: 10px;" type="text" placeholder="Enter letter in row 4 a,b,c,d,e">
+        <input style="width: 500px; text-align: center; border: 1px solid #ccc; display: block; margin-bottom: 10px;" type="text" placeholder="Enter letter in row 5 a,b,c,d,e">
+    </div>
+    <br>
+    
+    <input type="text" id="target" placeholder="place target word you want to check" style="width: 255px;">
+    <br>
+    <br>
+    <button id="solveButton">Solve</button>
+    <br>
+    
+    <div id="output" style="margin-top: 20px; background-color: #f0f0f0; padding: 10px; text-align: center;">
+        <br>
+        <p id="outputText">Output will be displayed here.</p>
+        <br>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
