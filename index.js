@@ -43,6 +43,7 @@ function setRowSize() {
         input.style.border = "1px solid #ccc";
         input.style.display = "block";
         input.style.marginBottom = "10px";
+        input.style.font-family = "'Playwrite NZ Basic','cursive'";
         
         container.appendChild(input);
     }
