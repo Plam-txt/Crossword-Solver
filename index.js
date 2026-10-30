@@ -1,13 +1,10 @@
 ///     button     ///
 let startButton = document.getElementById("solveButton");
 let setButton = document.getElementById("setRowButton");
-
 ///     valuable     ///
 let target = document.getElementById("target");
-
 ///     output     ///
 let outputfield1 = document.getElementById("output");
-
 // Make crosswordMatrix global so other functions can access it
 let crosswordMatrix = [];
 
@@ -36,15 +33,14 @@ function setRowSize() {
         let input = document.createElement("input");
         input.type = "text";
         input.placeholder = `Enter letter in row ${i} a,b,c,d,e`; 
-        
         // Exact styling from your original HTML input
         input.style.width = "500px";
         input.style.textAlign = "center";
         input.style.border = "1px solid #ccc";
         input.style.display = "block";
         input.style.marginBottom = "10px";
-        input.style.font-family = "'Playwrite NZ Basic','cursive'";
-        
+        input.style.fontFamily = "Playwrite NZ Basic";
+        //
         container.appendChild(input);
     }
 }
@@ -67,14 +63,11 @@ function solveCrossword() {
     output += '[' + crosswordMatrix.map(row => row.join(',') + ']').join('<br> [');
     output += '</p>';
     output += '<br>';
-    
     output += targetVal === "" ? 
         '<p>Target: null</p>' : 
         '<p>Target: "' + targetVal + '"</p>';
     output += '<br>';        
-
     outputfield1.innerHTML = output;
-
     if (targetVal.length > 0) {
         solveFullWord(targetVal);
     }
@@ -101,11 +94,9 @@ function solveFullWord(targetWord) {
 
 function findsameletters(targetletter, pos) {
     if (!targetletter || !targetletter[pos]) return null;
-    
     let targetletterLower = targetletter[pos].toLowerCase();
     let crosswordMatrix_ = crosswordMatrix.map(row => row.map(cell => cell.toLowerCase()));
     let match_pos = [];
-
     for (let i = 0; i < crosswordMatrix_.length; i++) {
         for (let j = 0; j < crosswordMatrix_[i].length; j++) {
             if (crosswordMatrix_[i][j] === targetletterLower) {
